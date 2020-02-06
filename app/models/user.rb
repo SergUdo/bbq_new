@@ -1,5 +1,4 @@
 class User < ActiveRecord::Base
-  # Добавляем к юзеру функции Девайза, перечисляем конкретные наборы функций
   devise :database_authenticatable, :registerable,
     :recoverable, :rememberable, :validatable
 
@@ -11,8 +10,6 @@ class User < ActiveRecord::Base
   validates :email, uniqueness: true
   validates :email, format: /\A[a-zA-Z0-9\-_.]+@[a-zA-Z0-9\-_.]+\z/
 
-  # При создании нового юзера (create), перед валидацией объекта выполнить
-  # метод set_name
   before_validation :set_name, on: :create
 
   private
