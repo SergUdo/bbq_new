@@ -1,17 +1,24 @@
 class User < ActiveRecord::Base
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  # Добавляем к юзеру функции Девайза, перечисляем конкретные наборы функций
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
-  # Юзер может создавать много событий
+    :recoverable, :rememberable, :validatable
+
   has_many :events
 
-  # Добавим заодно валидации для юзера
-  # Имя не не более 35 символов
   validates :name, presence: true, length: {maximum: 35}
-  # Уникальный email по заданному шаблону не более 255
-  # символов
-  validates :email, presence: true, length: {maximum: 255}
+
+  validates :email, length: {maximum: 255}
   validates :email, uniqueness: true
   validates :email, format: /\A[a-zA-Z0-9\-_.]+@[a-zA-Z0-9\-_.]+\z/
+
+  # При создании нового юзера (create), перед валидацией объекта выполнить
+  # метод set_name
+  before_validation :set_name, on: :create
+
+  private
+
+  # Задаем юзеру случайное имя, если оно пустое
+  def set_name
+    self.name = "Товарисч №#{rand(777)}" if self.name.blank?
+  end
 end
