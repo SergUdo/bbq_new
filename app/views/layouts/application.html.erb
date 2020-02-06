@@ -40,7 +40,6 @@
 <body>
   <div class="navbar navbar-default navbar-static-top">
     <div class="container">
-      <%# Для вывода названия приложения используем хелпер I18n.t %>
       <%= link_to t('app.name'), root_path, class: 'navbar-brand' %>
 
       <div class="navbar-collapse collapse navbar-responsive-collapse">
@@ -69,7 +68,6 @@
     </div>
 
     <footer>
-      <%# Для вывода названия компании используем хелпер I18n.t %>
       <p>&copy; <%= t 'app.company' %> 2020</p>
     </footer>
   </div>
