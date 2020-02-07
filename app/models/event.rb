@@ -1,4 +1,4 @@
-class Event < ActiveRecord::Base
+class Event < ApplicationRecord
   # Событие принадлежит юзеру
   belongs_to :user
 
