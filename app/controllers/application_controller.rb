@@ -3,6 +3,8 @@ class ApplicationController < ActionController::Base
 
   helper_method :current_user_can_edit?
 
+  helper_method :current_user_can_delete?
+
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(
       :account_update,
@@ -11,6 +13,10 @@ class ApplicationController < ActionController::Base
   end
 
   def current_user_can_edit?(event)
+    user_signed_in? && event.user == current_user
+  end
+
+  def current_user_can_delete?(event)
     user_signed_in? && event.user == current_user
   end
 end
