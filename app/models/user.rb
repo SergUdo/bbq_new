@@ -14,7 +14,6 @@ class User < ApplicationRecord
 
   private
 
-  # Задаем юзеру случайное имя, если оно пустое
   def set_name
     self.name = "Товарисч №#{rand(777)}" if name.blank?
   end
