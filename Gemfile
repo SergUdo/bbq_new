@@ -25,9 +25,10 @@ gem 'rails-i18n' , ' ~> 6.0.0 '
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'jquery-rails'
+gem 'cloudinary', '~> 1.13', '>= 1.13.2'
 
 # Use Active Storage variant
-# gem 'image_processing', '~> 1.2'
+ gem 'image_processing', '~> 1.2'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
