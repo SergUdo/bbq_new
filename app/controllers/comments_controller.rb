@@ -2,35 +2,38 @@ class CommentsController < ApplicationController
   before_action :set_comment, only: [:show, :edit, :update, :destroy]
 
   def create
-    @comment = Comment.new(comment_params)
+    @new_comment = @event.comments.build(comment_params)
+    @new_comment.user = current_user
 
-    respond_to do |format|
-      if @comment.save
-        format.html { redirect_to @comment, notice: 'Comment was successfully created.' }
-        format.json { render :show, status: :created, location: @comment }
-      else
-        format.html { render :new }
-        format.json { render json: @comment.errors, status: :unprocessable_entity }
-      end
+    if @new_comment.save
+      redirect_to @event, notice: I18n.t('controllers.comments.created')
+    else
+      render 'events/show', alert: I18n.t('controllers.comments.error')
     end
   end
 
   def destroy
-    @comment.destroy
-    respond_to do |format|
-      format.html { redirect_to comments_url, notice: 'Comment was successfully destroyed.' }
-      format.json { head :no_content }
+    message = {notice: I18n.t('controllers.comments.destroyed')}
+
+    if current_user_can_edit?(@comment)
+      @comment.destroy!
+    else
+      message = {alert: I18n.t('controllers.comments.error')}
     end
+
+    redirect_to @event, message
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_comment
-      @comment = Comment.find(params[:id])
+    def set_event
+      @event = Event.find(params[:event_id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
+    def set_comment
+      @comment = @event.comments.find(params[:id])
+    end
+
     def comment_params
-      params.fetch(:comment, {})
+      params.require(:comment).permit(:body, :user_name)
     end
 end
