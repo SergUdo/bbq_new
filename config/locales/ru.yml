@@ -42,3 +42,6 @@ ru:
   
   shure_flash: 'Вы уверены?'
 
+  comments:
+    comment:
+      destroy_confirm: 'Вы уверены, что хотите удалить этот комментарий?'
