@@ -27,4 +27,10 @@ class Subscription < ApplicationRecord
       super
     end
   end
+
+  def uniq_followers
+    Subscription.where(subscription_id: self.id)
+  end
+
+
 end
