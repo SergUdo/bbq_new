@@ -62,8 +62,6 @@ GEM
     aws_cf_signer (0.1.3)
     bcrypt (3.1.13)
     bindex (0.8.1)
-    bootsnap (1.4.5)
-      msgpack (~> 1.0)
     bootstrap_form (4.3.0)
       actionpack (>= 5.0)
       activemodel (>= 5.0)
@@ -137,7 +135,6 @@ GEM
     mini_mime (1.0.2)
     mini_portile2 (2.4.0)
     minitest (5.14.0)
-    msgpack (1.3.1)
     netrc (0.11.0)
     nio4r (2.5.2)
     nokogiri (1.10.7)
@@ -198,6 +195,7 @@ GEM
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 4.0)
       netrc (~> 0.8)
+    rmagick (4.0.0)
     rubocop (0.79.0)
       jaro_winkler (~> 1.5.1)
       parallel (~> 1.10)
@@ -278,7 +276,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bootsnap (>= 1.4.2)
   bootstrap_form
   byebug
   carrierwave
@@ -293,6 +290,7 @@ DEPENDENCIES
   puma (~> 4.1)
   rails (~> 6.0.2, >= 6.0.2.1)
   rails-i18n (~> 6.0.0)
+  rmagick
   rubocop
   rubocop-minitest
   rubocop-performance

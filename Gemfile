@@ -24,6 +24,7 @@ gem 'rails-i18n' , ' ~> 6.0.0 '
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+gem 'rmagick'
 gem 'carrierwave'
 gem 'therubyracer'
 gem "mini_magick"
@@ -34,7 +35,6 @@ gem 'cloudinary', '~> 1.13', '>= 1.13.2'
  gem 'image_processing', '~> 1.2'
 
 # Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', '>= 1.4.2', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
