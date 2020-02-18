@@ -4,7 +4,5 @@ class Photo < ApplicationRecord
 
   mount_uploader :photo, PhotoUploader
 
-  attribute :image_url, default: default_image
-
   scope :persisted, -> { where "id IS NOT NULL" }
 end
