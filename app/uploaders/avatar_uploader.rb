@@ -1,5 +1,7 @@
 class AvatarUploader < CarrierWave::Uploader::Base
+
   include CarrierWave::RMagick
+  include Cloudinary::CarrierWave
 
   storage :file
 
