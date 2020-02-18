@@ -52,3 +52,9 @@ ru:
   subscriptions:
     subscription:
       destroy_confirm: 'Вы уверены, что хотите удалить эту подписку?'
+
+  user:
+    email: 'Email'
+    name: 'Имя'
+    avatar: 'Аватарка'
+    password: 'Пароль'
