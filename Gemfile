@@ -30,6 +30,7 @@ gem 'therubyracer'
 gem "mini_magick"
 gem 'jquery-rails'
 gem 'cloudinary', '~> 1.13', '>= 1.13.2'
+gem 'sendgrid-ruby'
 
 # Use Active Storage variant
  gem 'image_processing', '~> 1.2'
