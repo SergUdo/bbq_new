@@ -32,6 +32,7 @@
 /config/initializers/cloudinary.rb
 /config/initializers/carrier_wave.rb
 /config/cloudinary.yml
+/config/sendgrid.yml
 /public/packs
 /public/packs-test
 /node_modules
