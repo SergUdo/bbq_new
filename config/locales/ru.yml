@@ -32,6 +32,7 @@ ru:
       created: 'Вы создали новое мероприятие'
       updated: 'Вы обновили мероприятие'
       destroyed: 'Вы удалили мероприятие :('
+      wrong_pincode: 'Неверный пин-код!'
     users:
       updated: 'Вы обновили свой профиль'
     comments:
@@ -68,3 +69,6 @@ ru:
     name: 'Имя'
     avatar: 'Аватарка'
     password: 'Пароль'
+
+  event:
+    pincode: 'Пин-код доступа'
