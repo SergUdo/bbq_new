@@ -1,3 +1,5 @@
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+<script src="map.js"></script>
 <div class="event">
   <div class="event-info row">
     <div class="col-md-12">
@@ -10,9 +12,10 @@
             <h1><%= @event.title %></h1>
             <h3><%= l @event.datetime, format: :short %></h3>
             <h3>
-              <small><%= link_to @event.address,
-                "https://yandex.ru/maps/?text=#{@event.address}" %></small>
-            </h3>
+              <small id='map'><%= link_to @event.address,
+                data_address="#{@event.address}"%>
+              </small>
+            </h3> 
             <p><%= @event.description %></p>
           </div>
 

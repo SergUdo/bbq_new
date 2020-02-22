@@ -2,7 +2,7 @@ ymaps.ready(init);
 var myMap;
 
 function init(){
-  address = document.getElementById('map').getAttribute('data-address');
+  address = document.getElementById('map').getAttribute('data_address');
 
   myMap = new ymaps.Map("map", {
       center: [49.047941567212035,37.59027111132809],
