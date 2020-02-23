@@ -8,4 +8,4 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require cloudinary
-//= require_tree ./sitewide
+//= require_tree .

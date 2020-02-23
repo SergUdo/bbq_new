@@ -1,5 +1,6 @@
 <div class="event-photo buffer-both">
-  	<%= link_to image_tag(photo.photo.thumb.url) unless photo.photo.thumb.url.blank? %>
+  	<%= link_to image_tag(photo.photo.thumb.url), photo.photo.url,
+          data: { toggle: 'lightbox', gallery: "event-#{photo.event.id}" } unless photo.photo.thumb.url.blank? %>
 
   Добавил <%= render partial: 'users/user', object: photo.user %>
 </div>
