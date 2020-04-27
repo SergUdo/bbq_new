@@ -11,31 +11,10 @@
 
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
-
-  <!-- For third-generation iPad with high-resolution Retina display: -->
-  <!-- Size should be 144 x 144 pixels -->
-  <%= favicon_link_tag 'apple-touch-icon-144x144-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '144x144' %>
-
-  <!-- For iPhone with high-resolution Retina display: -->
-  <!-- Size should be 114 x 114 pixels -->
-  <%= favicon_link_tag 'apple-touch-icon-114x114-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '114x114' %>
-
-  <!-- For first- and second-generation iPad: -->
-  <!-- Size should be 72 x 72 pixels -->
-  <%= favicon_link_tag 'apple-touch-icon-72x72-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '72x72' %>
-
-  <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
-  <!-- Size should be 57 x 57 pixels -->
-  <%= favicon_link_tag 'apple-touch-icon-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png' %>
-
-  <!-- For all other devices -->
-  <!-- Size should be 32 x 32 pixels -->
-  <%= favicon_link_tag 'favicon.ico', :rel => 'shortcut icon' %>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=b4a4d354-4fc9-49a5-893f-6fc22c6d7b47&lang=ru_RU" type="text/javascript">
+  </script>
 
   <%= javascript_pack_tag "application" %>
-  <!-- stylesheet_link_tag "//cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.css", :media => "all" %>
-   = javascript_pack_tag "//api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=" 
-   javascript_pack_tag "https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js" %>-->
 
   <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
   <!--[if lt IE 9]>

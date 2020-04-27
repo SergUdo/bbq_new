@@ -86,3 +86,8 @@ ru:
 
   event:
     pincode: 'Пин-код доступа'
+
+  sessions:
+    new:
+      header: 'Войти на сайт'
+      sign_in: 'Войти'
