@@ -19,7 +19,6 @@ window.DateTime = DateTime;
 
 import './map';
 
-@import 'bootstrap'
 //= require twitter/bootstrap
 
 
