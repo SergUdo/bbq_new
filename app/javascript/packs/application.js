@@ -8,8 +8,8 @@ require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
 require("jquery")
-require("ekko-lightbox/ekko-lightbox")
-require("imagesloaded/imagesloaded")
+// require("ekko-lightbox/ekko-lightbox")
+// require("imagesloaded/imagesloaded")
 
 import "cloudinary"
 import "bootstrap"
