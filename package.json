@@ -9,6 +9,11 @@
     "jquery": "^3.4.1",
     "turbolinks": "^5.2.0"
   },
+  
+  "browser": {
+    "cloudinary": false
+  },
+
   "version": "0.1.0",
   "devDependencies": {
     "case-sensitive-paths-webpack-plugin": "^2.3.0",
