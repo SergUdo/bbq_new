@@ -9,9 +9,10 @@
     "jquery": "^3.4.1",
     "turbolinks": "^5.2.0"
   },
-  
+
   "browser": {
-    "cloudinary": false
+    "cloudinary": false,
+    "bootstrap": false
   },
 
   "version": "0.1.0",
