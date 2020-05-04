@@ -1,8 +1,10 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!, except: [:show]
-  before_action :set_user, only: %i[show edit update]
+ # before_action :set_current_user, except: [:show]
 
-  def show; end
+  def show
+    @user = User.find(params[:id])
+  end
 
   def edit; end
 
@@ -16,9 +18,9 @@ class UsersController < ApplicationController
 
   private
 
-  def set_user
-    @user = User.find(params[:id])
-  end
+  # def set_user
+  #   @user = User.find(params[:id])
+  # end
 
   def user_params
     params.require(:user).permit(:name, :email, :avatar)
