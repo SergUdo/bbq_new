@@ -78,6 +78,9 @@ ru:
     subscription:
       destroy_confirm: 'Вы уверены, что хотите удалить эту подписку?'
 
+  show:
+    are_you_sure: 'Вы уверены?'
+
   user:
     email: 'Email'
     name: 'Имя'
@@ -96,4 +99,3 @@ ru:
     one: 'У Вас %{count} ошибка в форме'
     few: 'У Вас %{count} ошибки в форме'
     many: 'У Вас %{count} ошибок в форме'
-
