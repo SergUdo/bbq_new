@@ -9,8 +9,10 @@ class Subscription < ApplicationRecord
   validates :user_email, presence: true, format: /\A[a-zA-Z0-9\-_.]+@[a-zA-Z0-9\-_.]+\z/, unless: -> { user.present? }
 
   validates :user, uniqueness: {scope: :event_id}, if: -> { user.present? }
-  validates :user_email, uniqueness: {scope: :event_id}, unless: -> { user.present? }
   validates :user, uniqueness: {scope: :user_id}, if: -> { user.present? }
+  validates :user_email, uniqueness: {scope: :event_id}, unless: -> { user.present? }
+
+  validate :uniq_event, if: -> { user.present? }
 
   def user_name
     if user.present?
@@ -28,9 +30,15 @@ class Subscription < ApplicationRecord
     end
   end
 
+  private
+
   def uniq_followers
     Subscription.where(subscription_id: self.id)
   end
 
-
+  def uniq_event
+    if user.id == event.user_id
+      errors.add(user.name, I18n.t('errors.uniq_event'))
+    end
+  end
 end
