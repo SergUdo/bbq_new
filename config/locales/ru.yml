@@ -78,8 +78,9 @@ ru:
     subscription:
       destroy_confirm: 'Вы уверены, что хотите удалить эту подписку?'
 
-  show:
-    are_you_sure: 'Вы уверены?'
+  events:
+    show:
+      are_you_sure: 'Вы уверены?'
 
   user:
     email: 'Email'
