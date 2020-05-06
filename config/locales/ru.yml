@@ -87,6 +87,8 @@ ru:
     name: 'Имя'
     avatar: 'Аватарка'
     password: 'Пароль'
+    new:
+      forgot: 'Забыли пароль?'
 
   event:
     pincode: 'Пин-код доступа'
