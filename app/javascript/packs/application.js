@@ -4,7 +4,6 @@
 // that code so it'll be compiled.
 
 require("@rails/ujs").start()
-require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
 require("jquery")
@@ -13,6 +12,7 @@ require("bootstrap/dist/js/bootstrap")
 import "cloudinary"
 import "../stylesheets/application"
 import "ekko-lightbox/dist/ekko-lightbox"
+//require("turbolinks").start()
 //import "bootstrap"
 // import "ekko-lightbox/ekko-lightbox"
 // require("imagesloaded/imagesloaded")
