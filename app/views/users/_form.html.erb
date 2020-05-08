@@ -18,6 +18,6 @@
 
   <div class="form-group">
     <p><%= image_tag(@user.avatar.thumb.url) if @user.avatar? %></p>
-    <%= f.file_field :avatar %>
+    <%= f.file_field :avatar, direct_upload: true %>
   </div>
 <% end %>
