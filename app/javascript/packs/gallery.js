@@ -1,8 +1,8 @@
-$(function(){
-  $(".event-photos-gallery").owlCarousel();
+// $(function(){
+//   $(".event-photos-gallery").owlCarousel();
 
-  $(document).on('click', '[data-toggle="lightbox"]', function(event) {
-    event.preventDefault();
-    $(this).ekkoLightbox();
-  });
-});
+//   $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+//     event.preventDefault();
+//     $(this).ekkoLightbox();
+//   });
+//});
